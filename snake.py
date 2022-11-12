@@ -28,6 +28,7 @@ snake = turtle.Turtle()
 snake.speed(10)
 snake.shape('square')
 snake.color("black")
+snake.shapesize(stretch_wid=0.5, stretch_len=0.5)
 snake.penup()
 snake.goto(0,0)
 snake.direction = 'stop'
@@ -36,6 +37,7 @@ fruit = turtle.Turtle()
 fruit.speed(0)
 fruit.shape('circle')
 fruit.color('red')
+fruit.shapesize(stretch_wid=0.5, stretch_len=0.5)
 fruit.penup()
 x = random.randint(-290,270)
 y = random.randint(-240,240)
@@ -70,16 +72,16 @@ def snake_go_right():
 def snake_move():
 	if snake.direction == "up":
 		y = snake.ycor()
-		snake.sety(y + 20)
+		snake.sety(y + 10)
 	if snake.direction == "down":
 		y = snake.ycor()
-		snake.sety(y - 20)
+		snake.sety(y - 10)
 	if snake.direction == "left":
 		x = snake.xcor()
-		snake.setx(x - 20)
+		snake.setx(x - 10)
 	if snake.direction == "right":
 		x = snake.xcor()
-		snake.setx(x + 20)
+		snake.setx(x + 10)
 
 screen.listen()
 screen.onkeypress(snake_go_up, "Up")
@@ -93,7 +95,7 @@ delay = 0
 while True:
 	try:
 		for food in old_fruit:
-			if food.distance(snake) < 20:
+			if food.distance(snake) < 10:
 				time.sleep(1)
 				screen.clear()
 				screen.bgcolor('turquoise')
@@ -102,7 +104,7 @@ while True:
 				time.sleep(5)
 				raise turtle.Terminator
 		
-		if snake.distance(fruit)< 20:
+		if snake.distance(fruit)< 10:
 			x = random.randint(-290,270)
 			y = random.randint(-240,240)
 			fruit.goto(x,y)
@@ -115,6 +117,7 @@ while True:
 			new_fruit .speed(0)
 			new_fruit .shape('square')
 			new_fruit .color('red')
+			new_fruit.shapesize(stretch_wid=0.5, stretch_len=0.5)
 			new_fruit .penup()
 			old_fruit.append(new_fruit )
 
