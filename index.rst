@@ -15,5 +15,5 @@ return:
 
 .. code-block::bash
   
-  >>service.get_config()
+  service.get_config()
   {'ping': True}
