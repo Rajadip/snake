@@ -13,8 +13,7 @@ return:
   * dictionary: config dictonary
     * ping: bool value
 
-.. code-block::bash
-  :linenos:
+.. code-block:: bash
 
   service.get_config()
   {'ping': True}
