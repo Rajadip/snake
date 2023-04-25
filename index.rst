@@ -12,3 +12,7 @@ args:
 return:
   * dictionary: config dictonary
     * ping: bool value
+
+..code-block::bash
+  >>service.get_config()
+  {'ping': True}
