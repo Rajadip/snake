@@ -14,6 +14,7 @@ return:
     * ping: bool value
 
 .. code-block::bash
-  
+  :linenos:
+
   service.get_config()
   {'ping': True}
