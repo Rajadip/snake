@@ -9,7 +9,7 @@ this service will return config
 args:
   #. None
 
-return:
+return
   * dictionary: config dictonary.
     * ping: bool value.
 
