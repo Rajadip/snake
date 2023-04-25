@@ -11,7 +11,7 @@ args:
 
 return:
   * dictionary: config dictonary
-    * ping: bool value
+    - ping: bool value
 
 .. code-block:: bash
 
