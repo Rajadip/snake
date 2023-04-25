@@ -10,8 +10,8 @@ args:
   #. None
 
 return
-  * dictionary: config dictonary.
-    1 ping: bool value.
+  * dictionary: config dictonary
+    * ping: bool value.
 
 .. code-block:: bash
 
